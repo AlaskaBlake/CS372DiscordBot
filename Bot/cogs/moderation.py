@@ -8,7 +8,7 @@ class Moderation(commands.Cog):
         self.client = client
 
     # Events
-    @commands.Cog.listerner()
+    @commands.Cog.listener()
     async def on_ready(self):
         print('Bot is online.')
 

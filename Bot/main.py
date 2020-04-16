@@ -21,8 +21,8 @@ async def reload(ctx, extension):
 
 
 for filename in os.listdir('./cogs/'):
-    if filename.endswitch('.py'):
+    if filename.endswith('.py'):
         client.load_extension(f'cogs.{filename[:-3]}')
 
 # This is not the Bots actual token, contributors have the correct token.
-client.run('Dummy Token')
+client.run('bot token goes here')
