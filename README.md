@@ -1,4 +1,4 @@
-![Discord Logo]()
+![Discord Logo](https://github.com/AlaskaBlake/CS372DiscordBot/blob/master/Discord%20Logo.jpg)
 
 # CS372DiscordBot
 
