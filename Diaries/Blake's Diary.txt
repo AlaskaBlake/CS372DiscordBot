@@ -1,0 +1,8 @@
+April 12, 2020
+	Made the repository: 15 minutes
+April 15, 2020
+	Changed main to work with cog files: 1 hour
+April 19, 2020
+	Created a ReadMe with a small amount of documentation: 30 minutes
+April 20, 2020
+	Added heavy documentation to the Example Cog, main.py, and readme to make it more friendly to expansion: 2 hours
