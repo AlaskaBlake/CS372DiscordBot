@@ -46,4 +46,4 @@ async def on_command_error(ctx,error):
 # and get its token. This is where the token needs to go for the bot to run. Please never
 # upload yours bots actual token anywhere online. Discord's systems scans for bot tokens and
 # will automatically regenerate a new token for the bot.
-client.run('NzAwMTQzNDQxNjI3MDU0MDgx.XqZSEA.Ffmei27i-HYMkph8dXOczCoVOVc')
+client.run('dumy')
