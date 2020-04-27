@@ -10,7 +10,10 @@ class Moderation(commands.Cog):
     # Events
 
     # Commands
-
+    @commands.command()
+    async def kick(ctx, member : discord.Member, *, reason=None):
+        await member.kick(reason = reason)
+        await ctx.send(member +" was kick. Reason: "+ reason)
 
 def setup(client):
     client.add_cog(Moderation(client))
