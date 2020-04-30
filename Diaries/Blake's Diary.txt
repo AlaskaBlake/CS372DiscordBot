@@ -6,3 +6,5 @@ April 19, 2020
 	Created a ReadMe with a small amount of documentation: 30 minutes
 April 20, 2020
 	Added heavy documentation to the Example Cog, main.py, and readme to make it more friendly to expansion: 2 hours
+April 30, 2020
+	Added a development section to the README.md: 15 minutes

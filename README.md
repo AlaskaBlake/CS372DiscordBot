@@ -41,3 +41,10 @@ server, and getting its token see below as well.
 3. Click on the desired application then go to the OAuth2 tab.
 4. In the scopes section select "bot"
 5. Copy the invite link into a web browser and invite it to your chosen server.
+
+# Development
+
+The bot is made to be a starting point for people to create their own bot. Please use the example cog as a demonstration for the
+syntax for the bot. We are adhering to the Clang Tidy standards for clean code in Python. If you believe you have a cog that should
+be added to the project please submit a pull request to add the cog. Pull Requests will not be accepted if they edit the existing cogs
+unless and issue is found.
