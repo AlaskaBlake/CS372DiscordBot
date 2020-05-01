@@ -36,14 +36,15 @@ for filename in os.listdir('./cogs/'):
     if filename.endswith('.py'):
         client.load_extension(f'cogs.{filename[:-3]}')
 
+
 # This handle generic errors
 @client.event
-async def on_command_error(ctx,error):
-    if isinstance(error,commands.CommandNotFound):
+async def on_command_error(ctx, error):
+    if isinstance(error, commands.CommandNotFound):
         await ctx.send('No such command exist')
 
 # This is not the Bots actual token. In the readme.md it describes how to create a bot
 # and get its token. This is where the token needs to go for the bot to run. Please never
 # upload yours bots actual token anywhere online. Discord's systems scans for bot tokens and
 # will automatically regenerate a new token for the bot.
-client.run('dumy')
+client.run('Dummy')
