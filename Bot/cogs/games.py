@@ -53,7 +53,7 @@ class Games(commands.Cog):
         await ctx.send("Game ended.")
 
     @commands.command(pass_context=True)
-    async def character(self, ctx, arg1):
+    async def character(self, ctx, *, arg1):
         """Give a single name for character generator"""
         alignments = ["lawful good", "neutral good", "chaotic good", "lawful neutral", "true neutral",
                       "chaotic neutral",
