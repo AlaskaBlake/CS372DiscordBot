@@ -50,7 +50,10 @@ async def cat(ctx):
 dogLinks = [
     "https://3snrvh1nlkatbz4yq1mpe7la-wpengine.netdna-ssl.com/wp-content/uploads/2011/07/cute-puppy-dog-wallpapers.jpg",
     "https://i0.wp.com/cdn-prod.medicalnewstoday.com/content/images/articles/292/292567/bichon-frise-dog.jpg",
-    "https://i.ytimg.com/vi/Vp7nW2SP6H8/maxresdefault.jpg"]
+    "https://i.ytimg.com/vi/Vp7nW2SP6H8/maxresdefault.jpg"
+    "https://i.guim.co.uk/img/media/20098ae982d6b3ba4d70ede3ef9b8f79ab1205ce/0_0_969_1005/master/969.jpg",
+    "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/large-dog-breeds-lead-1550810849.jpg",
+]
 
 
 # Bot sends an image of a cat when pinged with cat
@@ -61,8 +64,8 @@ async def dog(ctx):
 
 # Bot says goodbye when pinged with bye
 @commands.command(pass_context=True)
-async def hello(ctx):
-    await ctx.send("Hey!")
+async def bye(ctx):
+    await ctx.send("See you soon, friend!")
 
 
 def setup(client):
