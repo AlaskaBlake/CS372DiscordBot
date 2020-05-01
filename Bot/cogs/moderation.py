@@ -8,12 +8,16 @@ class Moderation(commands.Cog):
         self.client = client
 
     # Events
+    @commands.Cog.listener()
+    async def on_ready(self):
+        print('Moderation online')
 
     # Commands
     @commands.command()
-    async def kick(ctx, member : discord.Member, *, reason=None):
-        await member.kick(reason = reason)
-        await ctx.send(member +" was kick. Reason: "+ reason)
+    async def kick(self, ctx, member: discord.Member, *, reason=None):
+        await member.kick(reason=reason)
+        await ctx.send(f"Member was kicked for: {reason}")
+
 
 def setup(client):
     client.add_cog(Moderation(client))
