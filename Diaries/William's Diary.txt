@@ -4,3 +4,6 @@ Spent 40 minutes on adding audio capabilities (not done yet)
 
 Apr. 30, 2020
 Spent 1 hour on getting audio.py to run audio (now works!)
+Spent 1 hour changin audio.py to work with other cogs
+Spent 15 minutes getting "leave" command to work
+Spent INSERT TIME HERE getting "play" command to play youtube audio instead of MP3s
