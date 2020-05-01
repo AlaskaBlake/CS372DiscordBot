@@ -18,7 +18,7 @@ server, and getting its token see below as well.
 # Games
 
 - Roulette: Give a number under 25 and see who wins russian roulette in that many rounds, you or the bot.
-- Guess: Guess a number, and give the range. Win if the random number in that range is the same as guess.
+- Guess: Guess a number, and give the range. Win if the random number from that range is the same as guess.
 - Character: Generate a random D&D character for given name
 
 
