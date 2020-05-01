@@ -12,7 +12,9 @@ client = commands.Bot(command_prefix="~")
 # without having to restart the bot.
 @client.command()
 async def load(ctx, extension):
+    """Given a cog file name it loads the cog file."""
     client.load_extension(f'cogs.{extension}')
+    ctx.send(f"{extension} now loaded.")
 
 
 # This command is used when you would not like the implementation of a certain cog.
@@ -20,15 +22,19 @@ async def load(ctx, extension):
 # and the commands for music are therefore unusable.
 @client.command()
 async def unload(ctx, extension):
+    """Given a cog file name it unloads the cog file."""
     client.unload_extension(f'cogs.{extension}')
+    ctx.send(f"{extension} now unloaded.")
 
 
 # This command is meant for development when the bot is online. If a cog is updated
 # and you do not want to restart the bot simple reload the specified cog.
 @client.command()
 async def reload(ctx, extension):
+    """Given a cog file name it reloads the cog file."""
     client.unload_extension(f'cogs.{extension}')
     client.load_extension(f'cogs.{extension}')
+    ctx.send(f"{extension} now reloaded.")
 
 
 # This loads all cogs in the cogs folder on start up.
@@ -47,4 +53,4 @@ async def on_command_error(ctx, error):
 # and get its token. This is where the token needs to go for the bot to run. Please never
 # upload yours bots actual token anywhere online. Discord's systems scans for bot tokens and
 # will automatically regenerate a new token for the bot.
-client.run('Dummy')
+client.run('NzAwMjQ3NjQzMDg3MDQ0Nzc5.Xqul9w.JVF3UouoN_BR0Q_X4HQa4sK_3Tk')

@@ -9,7 +9,9 @@ server, and getting its token see below as well.
 
 # Moderation
 
-
+Kick: Mention the user and then give a reason to why the user was kicked and the bot kicks the user and notifies that the command was executed.
+Ban: Does the same thing as the kick command except bans the user.
+Unban: Unbans the user given their name.
 
 # Games
 
@@ -21,6 +23,11 @@ server, and getting its token see below as well.
 
 # Music
 
+Join: Joins the channel that the user in.
+Leave: Leaves the channel that the bot is in
+Play: When given a youtube url, it will play the sound that is in the video. 
+    (Bot must be in the channel that the user is in for the command to work.)
+   
 
 
 # Making a Discord Bot and Obtaining its Token
@@ -41,6 +48,15 @@ server, and getting its token see below as well.
 3. Click on the desired application then go to the OAuth2 tab.
 4. In the scopes section select "bot"
 5. Copy the invite link into a web browser and invite it to your chosen server.
+
+#Setting Everything UP
+
+Open your terminal and enter these three commands separately:
+py -3 -m pip install -U discord.py
+pip install youtube_dl
+pip install asyncio
+
+For the audio cog to work you must install the third party software found [here](https://www.wikihow.com/Install-FFmpeg-on-Windows)
 
 # Development
 

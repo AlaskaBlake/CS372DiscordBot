@@ -21,6 +21,7 @@ class Example(commands.Cog):
     # The name of the function will be what you input for the command in a discord chat.
     @commands.command()
     async def ping(self, ctx):
+        """Responds to user"""
         await ctx.send('Pong!')
 
 
