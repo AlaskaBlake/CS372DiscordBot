@@ -1,0 +1,8 @@
+4/26:
+  Spend some time to make a new command for Moderation and added a generic (NO Such Command) error
+  handling for main. (Total Time: 15 minutes)
+
+4/26:
+  Spend 4 hours figuring out how to do kick and ban commands.
+  Spend 30 minutes doing presentaiton slide.
+  Could not figure out how to do unban. 
