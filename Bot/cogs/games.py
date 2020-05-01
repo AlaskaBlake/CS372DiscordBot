@@ -12,7 +12,7 @@ class Games(commands.Cog):
         print('Bear deployed')
 
     @commands.command(pass_context=True)
-    async def roulette(ctx, arg1):
+    async def roulette(self, ctx, arg1):
         """Given a number between zero and 25, starts that many rounds of russian roulette."""
         await ctx.send("Hey lets play russian roulette: paintball style")
         userW = False
@@ -36,7 +36,7 @@ class Games(commands.Cog):
         await ctx.send("Game ended.")
 
     @commands.command(pass_context=True)
-    async def guess(ctx, arg1, arg2):
+    async def guess(self, ctx, arg1, arg2):
         """First number is guess, second number is range of guessing game"""
         await ctx.send("The Guessing Game! The number is between 1 and " + str(arg2))
         guess = int(arg1)
@@ -52,7 +52,7 @@ class Games(commands.Cog):
         await ctx.send("Game ended.")
 
     @commands.command(pass_context=True)
-    async def character(ctx, arg1):
+    async def character(self, ctx, arg1):
         """Give a single name for character generator"""
         name = str(arg1)
         alignmentlist = ["lawlful good", "neutral good", "chaotic good", "lawlful neutral", "true neutral",
@@ -93,7 +93,7 @@ class Games(commands.Cog):
         rand5 = randint(0, len(skinlist) - 1)
         rand6 = randint(0, len(hairlist) - 1)
         rand7 = randint(0, len(flawlist) - 1)
-        rand8 = randint(0, len(abilitylist))
+        rand8 = randint(0, len(abilitylist) - 1)
         await ctx.send("Name: " + name)
         await ctx.send("Alignment: " + alignmentlist[rand1])
         await ctx.send("Class: " + classlist[rand2])
@@ -106,7 +106,8 @@ class Games(commands.Cog):
         await ctx.send("There's your character!")
 
     @commands.command(pass_context=True)
-    async def bear(ctx):
+    async def bear(self, ctx):
+        """A bear minding it's own business"""
         await ctx.send("https://66.media.tumblr.com/b1062ee309f5b95cf532be77842e9b0d/tumblr_nnysxtcv2C1s02vreo2_400.gif")
 
 def setup(client):
