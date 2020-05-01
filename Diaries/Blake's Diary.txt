@@ -9,3 +9,4 @@ April 20, 2020
 April 30, 2020
 	Added a development section to the README.md: 15 minutes
 	Helped William and Theng with documentation and syntax: 2 hours
+	Updated files with more documentation and README.md: 1 hour
