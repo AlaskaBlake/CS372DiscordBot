@@ -9,10 +9,9 @@ server, and getting its token see below as well.
 
 # Moderation
 
-Kick: Mention the user and then give a reason to why the user was kicked and the bot kicks the user and notifies that the command was  
-    executed.
-Ban: Does the same thing as the kick command except bans the user.
-Unban: Unbans the user given their name.
+- Kick: Mention the user and then give a reason to why the user was kicked and the bot kicks the user and notifies that the command was executed.
+- Ban: Does the same thing as the kick command except bans the user.
+- Unban: Unbans the user given their name.
 
 # Games
 
@@ -24,10 +23,9 @@ Unban: Unbans the user given their name.
 
 # Music
 
-Join: Joins the channel that the user in.
-Leave: Leaves the channel that the bot is in
-Play: When given a youtube url, it will play the sound that is in the video. 
-    (Bot must be in the channel that the user is in for the command to work.)
+- Join: Joins the channel that the user in.
+- Leave: Leaves the channel that the bot is in
+- Play: When given a youtube url, it will play the sound that is in the video. (Bot must be in the channel that the user is in for the command to work.)
    
 
 
@@ -53,9 +51,9 @@ Play: When given a youtube url, it will play the sound that is in the video.
 #Setting Everything UP
 
 Open your terminal and enter these three commands separately:
-py -3 -m pip install -U discord.py
-pip install youtube_dl
-pip install asyncio
+- py -3 -m pip install -U discord.py
+- pip install youtube_dl
+- pip install asyncio
 
 For the audio cog to work you must install the third party software found [here](https://www.wikihow.com/Install-FFmpeg-on-Windows)
 
