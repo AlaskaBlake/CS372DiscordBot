@@ -1,0 +1,6 @@
+April 22, 2020
+	Setup the Pycharm environment and began discord bot: 2 hours
+April 23, 2020
+	Implemented several test events, tested bot online: 1 hour
+April 24, 2020
+	Bot up and running, with loop error still: 1 hour
