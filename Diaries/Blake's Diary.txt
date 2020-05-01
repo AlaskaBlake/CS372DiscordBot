@@ -8,3 +8,4 @@ April 20, 2020
 	Added heavy documentation to the Example Cog, main.py, and readme to make it more friendly to expansion: 2 hours
 April 30, 2020
 	Added a development section to the README.md: 15 minutes
+	Helped William and Theng with documentation and syntax: 2 hours
