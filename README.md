@@ -19,20 +19,20 @@ server, and getting its token see below as well.
 
 - Roulette: Give a number under 25 and see who wins russian roulette in that many rounds, you or the bot.
 - Guess: Guess a number, and give the range. Win if the random number from that range is the same as guess.
-- Character: Generate a random D&D character for given name
+- Character: Generate a random D&D character for given name.
 
 
 # Image Generator
 
-- Cat: Generate cat images
-- Dog: Generate dog images
-- Random: Generate random animal images
+- Cat: Generate cat images.
+- Dog: Generate dog images.
+- Random: Generate random animal images.
 
 
 # Music
 
 - Join: Joins the channel that the user in.
-- Leave: Leaves the channel that the bot is in
+- Leave: Leaves the channel that the bot is in.
 - Play: When given a youtube url, it will play the sound that is in the video. (Bot must be in the channel that the user is in for the command to work.)
    
 
@@ -53,7 +53,7 @@ server, and getting its token see below as well.
 1. You have to have admin privileges for the server.
 2. Go into the developer portal you used to create the bot.
 3. Click on the desired application then go to the OAuth2 tab.
-4. In the scopes section select "bot"
+4. In the scopes section select "bot".
 5. Copy the invite link into a web browser and invite it to your chosen server.
 
 #Setting Everything UP
