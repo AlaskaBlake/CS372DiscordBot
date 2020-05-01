@@ -49,7 +49,7 @@ class Moderation(commands.Cog):
                 user = ban.user
                 if(user.name,user.discriminator) ==(name,discr):
                     await ctx.guild.unban(user)
-                    await ctx.send(f"{user.name} is no unbanned.")
+                    await ctx.send(f"{user.name} is no longer banned.")
                     return
         except:
             await ctx.send("Error: ~unban need Attention.")
