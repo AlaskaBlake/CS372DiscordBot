@@ -1,9 +1,15 @@
 Apr. 29, 2020
 Spent 1 hour 20 minutes getting a discord bot set up for debugging purposes
 Spent 40 minutes on adding audio capabilities (not done yet)
+Total time for the day: 2 hours
 
 Apr. 30, 2020
 Spent 1 hour on getting audio.py to run audio (now works!)
 Spent 2 hours changing audio.py to work with other cogs
 Spent 15 minutes getting "leave" command to work
-Spent INSERT TIME HERE getting "play" command to play youtube audio instead of MP3s
+Spent 2 hours getting "play" command to play youtube audio instead of MP3s
+Spent 10 minutes testing audio and making bot stream videos instead of download
+Spent 20 minutes making slides
+Total time for the day: 5 hours 45 minutes
+
+Total time on project: 7 hours 45 minutes
