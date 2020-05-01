@@ -1,9 +1,56 @@
 import discord
 from discord.ext import commands
+import youtube_dl
+import asyncio
+
+youtube_dl.utils.bug_reports_message = lambda: ''
+
+
+ytdl_format_options = {
+    'format': 'bestaudio/best',
+    'outtmpl': '%(extractor)s-%(id)s-%(title)s.%(ext)s',
+    'restrictfilenames': True,
+    'noplaylist': True,
+    'nocheckcertificate': True,
+    'ignoreerrors': False,
+    'logtostderr': False,
+    'quiet': True,
+    'no_warnings': True,
+    'default_search': 'auto',
+    'source_address': '0.0.0.0' # bind to ipv4 since ipv6 addresses cause issues sometimes
+}
+
+ffmpeg_options = {
+    'options': '-vn'
+}
+
+ytdl = youtube_dl.YoutubeDL(ytdl_format_options)
+
+
+class YTDLSource(discord.PCMVolumeTransformer):
+    def __init__(self, source, *, data, volume=0.5):
+        super().__init__(source, volume)
+
+        self.data = data
+
+        self.title = data.get('title')
+        self.url = data.get('url')
+
+    @classmethod
+    async def from_url(cls, url, *, loop=None, stream=False):
+        loop = loop or asyncio.get_event_loop()
+        data = await loop.run_in_executor(None, lambda: ytdl.extract_info(url, download=not stream))
+
+        if 'entries' in data:
+            # take first item from a playlist
+            data = data['entries'][0]
+
+        filename = data['url'] if stream else ytdl.prepare_filename(data)
+        return cls(discord.FFmpegPCMAudio(filename, **ffmpeg_options), data=data)
+
 
 players = {}
 
-bot = commands.Bot(command_prefix = '.')
 
 class Audio(commands.Cog):
 
@@ -13,22 +60,26 @@ class Audio(commands.Cog):
     # Events
 
     # Commands
-    @commands.command(pass_context=True)
-    async def join(ctx):
+    @commands.command()
+    async def join(self, ctx):
         channel = ctx.message.author.voice.channel
         await channel.connect()
 
-    @commands.command(pass_context=True)
-    async def leave(ctx):
-        await ctx.bot.disconnect()
+    @commands.command()
+    async def leave(self, ctx):
+        server = ctx.message.guild.voice_client
+        await server.disconnect()
 
-    @commands.command(pass_context=True)
-    async def play(ctx):
-        guild = ctx.guild
-        voice_client: discord.VoiceClient = discord.utils.get(bot.voice_clients, guild=guild)
-        audio_source = discord.FFmpegPCMAudio('Oh_No.mp3')
-        if not voice_client.is_playing():
-            voice_client.play(audio_source, after=None)
+    # plays audio from a given url
+    @commands.command()
+    async def play(self, ctx, *, url):
+        print("Play is running")
+        async with ctx.typing():
+            player = await YTDLSource.from_url(url, loop=self.bot.loop)
+            ctx.voice_client.play(player, after=lambda e: print('Player error: %s' % e) if e else None)
+
+        await ctx.send('Now playing: {}'.format(player.title))
+
 
 def setup(client):
     client.add_cog(Audio(client))
