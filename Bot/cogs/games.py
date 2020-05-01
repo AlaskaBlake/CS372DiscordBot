@@ -13,6 +13,7 @@ class Games(commands.Cog):
 
     @commands.command(pass_context=True)
     async def roulette(ctx, arg1):
+        """Given a number between zero and 25, starts that many rounds of russian roulette."""
         await ctx.send("Hey lets play russian roulette: paintball style")
         userW = False
         bulletz = int(arg1)
@@ -36,6 +37,7 @@ class Games(commands.Cog):
 
     @commands.command(pass_context=True)
     async def guess(ctx, arg1, arg2):
+        """First number is guess, second number is range of guessing game"""
         await ctx.send("The Guessing Game! The number is between 1 and " + str(arg2))
         guess = int(arg1)
         answ = int(randint(1, int(arg2)))
@@ -51,6 +53,7 @@ class Games(commands.Cog):
 
     @commands.command(pass_context=True)
     async def character(ctx, arg1):
+        """Give a single name for character generator"""
         name = str(arg1)
         alignmentlist = ["lawlful good", "neutral good", "chaotic good", "lawlful neutral", "true neutral",
                          "chaotic neutral",
