@@ -40,6 +40,22 @@ class Moderation(commands.Cog):
 
     @has_permissions(administrator=True, manage_messages=True, manage_roles=True)
     @commands.command()
+    async def unban(self,ctx,*,member):
+        """Unban a user. Need permission to use it."""
+        try:
+            banned = await ctx.guild.bans()
+            name, discr = member.split("#")
+            for ban in banned:
+                user = ban.user
+                if(user.name,user.discriminator) ==(name,discr):
+                    await ctx.guild.unban(user)
+                    await ctx.send(f"{user.name} is no unbanned.")
+                    return
+        except:
+            await ctx.send("Error: ~unban need Attention.")
+
+    @has_permissions(administrator=True, manage_messages=True, manage_roles=True)
+    @commands.command()
     async def mute(self,ctx,member:discord.Member,*,reason = None):
         """Mute a user. Need permission to use it."""
         try:
