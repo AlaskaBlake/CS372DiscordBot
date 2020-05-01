@@ -107,7 +107,7 @@ class Games(commands.Cog):
 
     @commands.command(pass_context=True)
     async def bear(ctx):
-        await ctx.send("https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif")
+        await ctx.send("https://66.media.tumblr.com/b1062ee309f5b95cf532be77842e9b0d/tumblr_nnysxtcv2C1s02vreo2_400.gif")
 
 def setup(client):
     client.add_cog(Games(client))
