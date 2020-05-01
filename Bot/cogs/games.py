@@ -87,6 +87,7 @@ class Games(commands.Cog):
                  "they'd rather kill someone in their sleep than fight fair"
                  ]
         abilities = ["strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma"]
+        await ctx.send("Name: " + str(arg1))
         await ctx.send("Alignment: " + alignments[randint(0, len(alignments) - 1)])
         await ctx.send("Class: " + classes[randint(0, len(classes) - 1)])
         await ctx.send("Race: " + races[randint(0, len(races) - 1)])
