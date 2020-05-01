@@ -4,3 +4,9 @@ April 23, 2020
 	Implemented several test events, tested bot online: 1 hour
 April 24, 2020
 	Bot up and running, with loop error still: 1 hour
+April 29, 2020
+	Loop error turned out to be boolean error in Roulette command, fixed.
+	Roulette works, guessing game added: 2.5 hours
+May 1, 2020
+	Added character generator: 30 mins
+	Began preparing all commands for cog, committed, updated readme, added help descriptions: 1 hour
