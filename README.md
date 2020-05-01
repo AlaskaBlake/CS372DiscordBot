@@ -12,6 +12,8 @@ server, and getting its token see below as well.
 - Kick: Mention the user and then give a reason to why the user was kicked and the bot kicks the user and notifies that the command was executed.
 - Ban: Does the same thing as the kick command except bans the user.
 - Unban: Unbans the user given their name.
+- Mute: Mutes the user given their name.
+- Unmute: Unmutes the user given their name.
 
 # Games
 
