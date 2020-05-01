@@ -17,8 +17,11 @@ server, and getting its token see below as well.
 
 
 
-# Image Searching
+# Image Generator
 
+- Cat: Generate cat images
+- Dog: Generate dog images
+- Random: Generate random animal images
 
 
 # Music
