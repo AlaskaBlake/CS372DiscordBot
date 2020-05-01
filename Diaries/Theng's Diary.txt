@@ -2,7 +2,14 @@
   Spend some time to make a new command for Moderation and added a generic (NO Such Command) error
   handling for main. (Total Time: 15 minutes)
 
-4/26:
+4/30:
   Spend 4 hours figuring out how to do kick and ban commands.
   Spend 30 minutes doing presentaiton slide.
   Could not figure out how to do unban. 
+
+4/30:
+  Spend another 2 hours adding mute and unmute commands.
+  Finally figured out what's wrong with unban. Fixed uban.
+  
+
+
