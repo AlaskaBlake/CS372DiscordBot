@@ -87,13 +87,12 @@ class Games(commands.Cog):
                  "they'd rather kill someone in their sleep than fight fair"
                  ]
         abilities = ["strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma"]
-        await ctx.send("Name: " + str(arg1))
-        await ctx.send("Alignment: " + alignments[randint(0, len(alignmentlist) - 1)])
-        await ctx.send("Class: " + classes[randint(0, len(classlist) - 1)])
-        await ctx.send("Race: " + races[randint(0, len(racelist) - 1)])
-        await ctx.send("Eyes: " + eyes[randint(0, len(eyelist) - 1)])
-        await ctx.send("Skin: " + skins[randint(0, len(skinlist) - 1)])
-        await ctx.send("Hair: " + hairs[randint(0, len(hairlist) - 1)])
+        await ctx.send("Alignment: " + alignments[randint(0, len(alignments) - 1)])
+        await ctx.send("Class: " + classes[randint(0, len(classes) - 1)])
+        await ctx.send("Race: " + races[randint(0, len(races) - 1)])
+        await ctx.send("Eyes: " + eyes[randint(0, len(eyes) - 1)])
+        await ctx.send("Skin: " + skins[randint(0, len(skins) - 1)])
+        await ctx.send("Hair: " + hairs[randint(0, len(hairs) - 1)])
         await ctx.send("Flaw: " + flaws[randint(0, len(flaws) - 1)])
         await ctx.send("Best Ability: " + abilities[randint(0, len(abilities) - 1)])
         await ctx.send("There's your character!")
