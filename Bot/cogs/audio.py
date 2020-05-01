@@ -62,20 +62,22 @@ class Audio(commands.Cog):
     # Commands
     @commands.command()
     async def join(self, ctx):
+        """Has bot join the voice channel that you are in"""
         channel = ctx.message.author.voice.channel
         await channel.connect()
 
     @commands.command()
     async def leave(self, ctx):
+        """Has bot exit the voice channel"""
         server = ctx.message.guild.voice_client
         await server.disconnect()
 
     # plays audio from a given url
     @commands.command()
     async def play(self, ctx, *, url):
-        """TESTING A THING"""
+        """Given a YouTube URL, plays the link's audio if bot is in voice channel"""
         async with ctx.typing():
-            player = await YTDLSource.from_url(url, loop=self.client.loop)
+            player = await YTDLSource.from_url(url, loop=self.client.loop, stream=True)
             ctx.voice_client.play(player, after=lambda e: print('Player error: %s' % e) if e else None)
 
         await ctx.send('Now playing: {}'.format(player.title))
