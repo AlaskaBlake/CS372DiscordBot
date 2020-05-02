@@ -41,18 +41,47 @@ class Moderation(commands.Cog):
     @has_permissions(administrator=True, manage_messages=True, manage_roles=True)
     @commands.command()
     async def unban(self,ctx,*,member):
-        """Unban a user. Need permission to use it."""
+        """Unban a user. Need permission to use it. [all, last]"""
         try:
             banned = await ctx.guild.bans()
-            name, discr = member.split("#")
+
+            if not banned:
+                 await ctx.send("Not a single user is banned. Ban someone first.") 
+                 return
+           
+            if member != "all" and member !="last":
+                name, discr = member.split("#")
+            if member == "last":
+                user = banned[len(banned)-1].user
+                await ctx.guild.unban(user)
+                await ctx.send(f"{user.name} is no longer banned.")
+                return
+
             for ban in banned:
-                user = ban.user
-                if(user.name,user.discriminator) ==(name,discr):
-                    await ctx.guild.unban(user)
-                    await ctx.send(f"{user.name} is no longer banned.")
+                if member =="all":
+                    await ctx.guild.unban(ban.user)
+                    continue 
+                elif(ban.user.name,ban.user.discriminator) ==(name,discr):
+                    await ctx.guild.unban(ban.user)
+                    await ctx.send(f"{ban.user.name} is no longer banned.")
                     return
+
+            await ctx.send("All banned member are no longer banned.")
         except:
             await ctx.send("Error: ~unban need Attention.")
+
+    @commands.command()
+    async def banlist(self,ctx):
+        """Get a list of all banned users."""
+        banned_user="banned users: \n"
+        banned = await ctx.guild.bans()
+        if not banned:
+            await ctx.send("No banned user.")
+        else:
+            for ban in banned:
+               banned_user+=ban.user.name +"#"+ ban.user.discriminator+"\n"
+            await ctx.send(banned_user)
+
 
     @has_permissions(administrator=True, manage_messages=True, manage_roles=True)
     @commands.command()

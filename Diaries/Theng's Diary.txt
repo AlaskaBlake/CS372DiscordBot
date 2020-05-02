@@ -11,5 +11,11 @@
   Spend another 2 hours adding mute and unmute commands.
   Finally figured out what's wrong with unban. Fixed uban.
   
+5/1:
+  Spend 1.5 hours adding a new command, banlist which give a list
+  of banned user name and number. Also added more option to the
+  unban command; which now takes two optional argument: all and last.
+  Optional all unban all banned user. Optional last unban the last
+  banned user in the banned list. 
 
 
