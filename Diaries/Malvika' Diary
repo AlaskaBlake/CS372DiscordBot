@@ -5,3 +5,8 @@ Time spent: 2 hr- 2.5 hr
   -I created the animal bot. But, the images are just stored as links which I don't like. 
   -I'd like them to be uploaded as images. 
   -Might work on it in the morning, I am too tired, haven't slept in 2 days! 
+
+Time spent: 3 hours
+  -Created a new file called embedlinks.py that contains all the url of the images
+  -Added more images
+  -Added a text at the bottom that says : "Requested by: username"
