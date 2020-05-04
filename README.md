@@ -27,8 +27,9 @@ server, and getting its token see below as well.
 
 - Cat: Generate cat images.
 - Dog: Generate dog images.
-- Random: Generate random animal images.
-
+- Surprise: Generate random animal images.
+- hello: Bot says- Hey!
+- bye: Bot says- See you soon, friend!
 
 # Music
 
